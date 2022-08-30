@@ -1,0 +1,94 @@
+//* variables *//
+
+$WidthHeight: 50px; 
+$Position: absolute; 
+
+//* mixin styles *// 
+
+@mixin Transitions {
+    width: 250px; 
+    transition-duration: 1s; 
+    transition-timing-function: ease-in-out;
+}
+
+//* body *// 
+
+body {
+    background-color: rgb(175, 189, 212);
+}
+
+.container {
+    position: relative; 
+    margin-right: -8px;
+    div { 
+    overflow: hidden; 
+    text-decoration: underline;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+
+div.blog {
+    position: $Position;
+    top: 500px; 
+    right: 0px;
+    color:black; 
+    width: $WidthHeight; 
+    height: $WidthHeight;
+    background: white; 
+    &:hover {
+    @include Transitions();
+    }
+}
+
+
+div.twitter {
+    position: $Position;
+    top: 550px; 
+    right: 0px;
+    color: white;
+    background: #00aced;
+    width: $WidthHeight; 
+    height: $WidthHeight;
+    &:hover {
+    @include Transitions();
+    }
+}
+
+div.linked-in {
+    position: $Position;
+    top: 600px; 
+    right: 0px;
+    color:white; 
+    background: #007bb6;
+    width: $WidthHeight; 
+    height: $WidthHeight;
+    &:hover {
+    @include Transitions(); 
+    }
+}
+
+div.facebook {
+    position: $Position;
+    top: 650px; 
+    right: 0px;
+    color: white; 
+    background:#3b5998;
+    width: $WidthHeight; 
+    height: $WidthHeight;
+    &:hover {
+    @include Transitions();  
+    }
+}
+
+div.github {
+    position: $Position; 
+    top: 700px; 
+    right: 0px;
+    color: black; 
+    background: white;
+    width: $WidthHeight; 
+    height: $WidthHeight;
+    &:hover {
+    @include Transitions();   
+    }
+}
